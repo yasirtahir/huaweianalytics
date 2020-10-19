@@ -218,6 +218,33 @@ View the reported debugging data.
 ![enter image description here](https://github.com/yasirtahir/huaweianalytics/raw/main/images/9.png)
 
 
+## **HmsGmsUtil Class**
+In real world, we use HMS core only on Huawei devices. In order to maintain single code base, we use this Utility Class to make sure to initiate the respective SDK.
+
+1.  **(Step 1.7)** Paste the following code inside HmsGmsUtil Class.
+
+		// TODO: 1.7 Utility functions to check either the phone is HMS or GMS  
+  
+		fun booleanIsHmsAvailable(context: Context?): Boolean {  
+			var booleanIsAvailable = false  
+			if (null != context) {  
+		        val result = HuaweiApiAvailability.getInstance().isHuaweiMobileServicesAvailable(context)  
+		        booleanIsAvailable = ConnectionResult.SUCCESS == result  
+		    }  
+			Log.i(TAG, "isHmsAvailable: $booleanIsAvailable")  
+		    return booleanIsAvailable  
+		}  
+  
+		fun booleanIsGmsAvailable(context: Context?): Boolean {  
+		    var booleanIsAvailable = false  
+			if (null != context) {  
+		        val result = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)  
+		        booleanIsAvailable = ConnectionResult.SUCCESS == result  
+		    }  
+		    Log.i(TAG, "isGmsAvailable: $booleanIsAvailable")  
+		    return booleanIsAvailable  
+		}
+
 
 
 ## **FAQs**
@@ -268,5 +295,4 @@ Well done! You have successfully completed this codelab and learned how to:
 
 -   Integrate Huawei Analytics Kit.
 -   Call APIs of Huawei Analytics Kit.
-
 
