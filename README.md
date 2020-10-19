@@ -9,7 +9,7 @@ In this codelab, you will learn how to:
 -   Correctly use APIs of Analytics Kit.
 
 ## **Downloading the Source Code**
-Download the .zip file and open the project in the Android Studio. If you face any issues, please raise your concerns.
+Download the [.zip file](https://github.com/yasirtahir/huaweianalytics/raw/main/HuaweiAnalytics_StarterCode.rar) and open the project in the Android Studio. If you face any issues, please raise your concerns.
 
 ## Integration Preparations (Optional)
 The following steps has been completed already for you but It's worth mentioning.
